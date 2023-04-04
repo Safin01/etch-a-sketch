@@ -34,6 +34,7 @@ function createBoard(size){
 
     for(let i = 0; i<numDivs; i++){
         let div = document.createElement("div");
+        div.setAttribute("id", "grid-div");
         div.addEventListener("mouseover", colorDiv)
         board.insertAdjacentElement("beforeend",div)
     }
@@ -68,7 +69,7 @@ function setColor(colorChoice){
 }
 
 function reset(){
-    let divs = document.querySelectorAll("div");
+    let divs = document.querySelectorAll("#grid-div");
     divs.forEach((div) => div.style.backgroundColor = "white");
     
 }
