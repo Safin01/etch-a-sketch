@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", function(){
             click = !click;
             let draw = document.querySelector("#draw");
             if(click){
-                draw.innerHTML = "Now you can draw";
+                draw.innerHTML = "Now you can draw. <br> Click to pause";
+                
             }else{
-                draw.innerHTML = "you are not allowed to draw";
+                draw.innerHTML = "Click anywhere to draw";
             }
         }
     })
@@ -47,7 +48,7 @@ function getSize(){
     if(input == ""){
         msg.innerHTML = "Please provide a number";
     }else if(input < 0 || input > 100){
-        msg.innerHTML = "Provide a number between 0 and 100";
+        msg.innerHTML = "Provide a number between 1 and 100";
     }else{
         msg.innerHTML= "Now you play";
         return input;
